@@ -19,7 +19,11 @@ def fac(n):
 
     Функция должна вернуть факториал аргумента, числа n.
     """
-    pass
+    assert n >= 0, f'Входящее исло должно быть положтельным!'
+    result = 1
+    for j in {i for i in range(1, n+1)}:
+        result = result*j
+    return result
 
 
 def gcd(a, b):
@@ -35,7 +39,14 @@ def gcd(a, b):
 
     (mod - операция взятия остатка от деления, в python - оператор '%')
     """
-    pass
+    while True:
+        if a < b:
+            a, b = b, a
+
+        if a % b == 0:
+            return b
+        else:
+            a = a % b
 
 
 def fib():
@@ -53,6 +64,16 @@ def fib():
 
     """
     pass
+    # Вариант, когда последовательность определена условием:
+    # i = 0
+    # start = [1, 1, 2, 3, 5, 8, 13]
+    # while i < 10:
+    #     start.append(start[-1] + start[-2])
+    #     i += 1
+    # return start
+
+
+
 
 
 def flatten(seq):
@@ -70,3 +91,8 @@ def flatten(seq):
     [1, 2, 3, 4]
     """
     pass
+
+
+if __name__ == '__main__':
+    pass
+    print(fib())
