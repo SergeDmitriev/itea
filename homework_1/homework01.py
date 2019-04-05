@@ -63,17 +63,17 @@ def fib():
       ..
 
     """
-    pass
-    # Вариант, когда последовательность определена условием:
-    # i = 0
-    # start = [1, 1, 2, 3, 5, 8, 13]
-    # while i < 10:
-    #     start.append(start[-1] + start[-2])
-    #     i += 1
-    # return start
 
+    start = [1, 1, 2, 3, 5, 8, 13]
+    f = start[0]
+    s = start[1]
+    yield f  # ряд начинается не с 0 и ждет первое значение равное 1
 
-
+    while True:
+        yield f
+        s = f + s
+        yield s
+        f = f + s
 
 
 def flatten(seq):
@@ -90,9 +90,12 @@ def flatten(seq):
     >>> flatten([(1, 2), (3, 4)])
     [1, 2, 3, 4]
     """
-    pass
+    result = []
+
+    # for i in seq:
+    #     try:
+
 
 
 if __name__ == '__main__':
     pass
-    print(fib())
