@@ -2,7 +2,7 @@ from itertools import islice
 
 import pytest
 
-from homework_1.homework01 import gcd, fac, fib, flatten
+from homework_1.task2_home_remake import gcd, fac, fib, flatten
 
 
 @pytest.mark.parametrize('a, b', [
